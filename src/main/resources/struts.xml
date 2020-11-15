@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<package name="s2-contact-detail" namespace="/" extends="struts-default">
+
+		<action name="openContactDetailPage" class="org.jeet.work.action.ContactDetailAction" method="openContactDetailPage">
+			<result>/jsp/contactDetailPage.jsp</result>
+		</action>
+		
+		<action name="openContactDetailForm" class="org.jeet.work.action.ContactDetailAction" method="openContactDetailForm">
+			<result>/jsp/contactDetailForm.jsp</result>
+		</action>
+
+		<action name="validationsForm" class="org.jeet.work.model.ContactDetail" method="validationsForm">
+			<result name="success" type="redirectAction">
+				<param name="actionName">saveAndUpdate</param>
+				<param name="id">${id}</param>
+				<param name="firstname">${firstname}</param>
+				<param name="lastname">${lastname}</param>
+				<param name="email">${email}</param>
+				<param name="phone">${phone}</param>
+			</result>
+			<result name="input">/jsp/contactDetailForm.jsp</result>
+		</action>
+
+		<action name="saveAndUpdate" class="org.jeet.work.action.ContactDetailAction" method="saveAndUpdate">
+			<result name="success" type = "redirect">openContactDetailPage</result>
+			<result name="error" type = "redirect">/jsp/contactDetailForm.jsp</result>
+		</action>
+		
+		<action name="delete" class="org.jeet.work.action.ContactDetailAction" method="delete">
+			<result name="success" type = "redirect">openContactDetailPage</result>
+			<result name="error" type = "redirect">/jsp/contactDetailPage.jsp</result>
+		</action>
+		
+		<action name="update" class="org.jeet.work.action.ContactDetailAction" method="update">
+			<result name="success">/jsp/contactDetailForm.jsp</result>
+		</action>
+		
+		<action name="openCV" class="org.jeet.work.IndexAction">
+			<result name="success">/jsp/cvPage.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

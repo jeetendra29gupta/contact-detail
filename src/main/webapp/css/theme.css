@@ -1,0 +1,145 @@
+body {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	background-color: #f2f2f2;
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+
+#headerDiv, #footerDiv {
+	width: calc(100vw-20px);
+	height: 10vh;
+	line-height: 10vh;
+	background-color: #c2c2c2;
+	margin: 10px;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+}
+#headerDiv{
+	font-size: xx-large;
+}
+#tableDiv , #formDiv{
+	width: calc(100vw-20px);
+	height: calc(80vh - 70px);
+	background-color: #c2c2c2;
+	margin: 10px;
+	border-radius: 5px;
+	padding: 5px;
+}
+.add-button{
+	width: calc(50% - 40px);
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 15px 30px;
+	text-decoration: none;
+	background-color: #e7e7e7;
+	cursor: pointer;
+	
+}
+.search-input{
+	width: calc(50% - 40px);
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 15px 30px;
+	text-decoration: none;
+	
+}
+
+.contactTable {
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;	
+}
+
+.contactTable-th {
+	padding: 10px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+	width: 25%;
+}
+
+.contactTable-td {
+	padding: 10px;
+	text-align: left;
+	width: 25%;
+}
+
+.contactTable tr:hover {
+	background-color: #ddd;
+}
+.scrollingTable {
+	overflow: scroll;
+	width: calc(100vw-20px);
+	height: calc(80vh - 180px);
+}
+
+.scrollingForm{
+	overflow: scroll;
+	width: calc(100vw-20px);
+	height: calc(80vh - 70px);
+}
+#deleteButton:link, #deleteButton:visited {
+	background-color: #f44336;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#updateButton:link, #updateButton:visited {
+	background-color: #2bccff;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.inputBox {
+	width: 100%;
+	padding: 10px 20px;
+	margin: 4px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.buttonBox {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	margin: 5px 0;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.buttonBox:hover {
+	background-color: #45a049;
+}
+
+#my-cv{
+	border:none; 
+	width: calc(100vw);
+	height: calc(90vh - 25px);
+}
+.wwFormTable {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 50%
+}
+
+.tdErrorMessage{
+	color: #f44336;
+	font-size: small;
+}
